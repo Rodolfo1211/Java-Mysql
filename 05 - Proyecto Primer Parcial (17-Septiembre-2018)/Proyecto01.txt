@@ -1,0 +1,73 @@
+create database proyecto01;
+use proyecto01;
+
+	// Cuarto en entrar //
+create table celular(  	
+idcelular int,
+idnumEmpleado int,
+idcliente int,
+nombre varchar(45),
+sisoperativo varchar(45),
+marca varchar(45),
+memoria varchar(45),
+precio double,
+compañia varchar(45),
+color varchar(45),
+cantidadcamaras int,
+pulgadas int,
+fechaventa date,
+pixeles varchar(45),
+primary key(idcelular),
+foreign key(idcliente)references cliente(idcliente),
+foreign key(idnumEmpleado)references empleado(idnumEmpleado));
+
+	// Primero en entrar //
+create table cliente(   
+idcliente int,
+nombre varchar(45),
+apaterno varchar(45),
+amaterno varchar(45),
+rfc varchar(45),
+celular int,
+fechanacimiento date,
+correo varchar(70),
+sexo varchar(20),
+primary key(idcliente));
+
+	// Quinto y último en entrar //
+create table nota(		
+idnota int,
+idcelular int,
+fechapago date,
+detalleventa varchar(99),
+cantidadproductos int,
+preciototal double,
+primary key(idnota),
+foreign key(idcelular)references celular(idcelular));
+
+	// Segundo en entrar //
+create table tienda(		
+idtienda int,
+nombre varchar(45),
+telefono int,
+pais varchar(45),
+direccion varchar(45),
+correo varchar(45),
+horario varchar(45),
+rfc varchar(45),
+primary key(idtienda));
+
+	// Tercero en entrar //
+create table empleado(	
+idnumEmpleado int,
+idtienda int,
+nombre varchar(45),
+cargo varchar(45),
+celular int,
+email varchar(45),
+sexo varchar(45),
+primary key(idnumEmpleado),
+foreign key(idtienda)references tienda(idtienda));
+
+
+

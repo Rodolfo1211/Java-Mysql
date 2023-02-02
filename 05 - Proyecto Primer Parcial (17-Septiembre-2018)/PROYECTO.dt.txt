@@ -1,0 +1,480 @@
+///////////////////////////   celularDT   ////////////////////////
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package PROYECTO.dt;
+
+import java.sql.Date;
+
+/**
+ *
+ * @author jamon
+ */
+public class celularDT {
+    private int idcelular;
+    private int idnumEmpleado;
+    private int idcliente;
+    private String nombre;
+    private String sisoperativo;
+    private String marca;
+    private String memoria;
+    private double precio;
+    private String compañia;
+    private String color;
+    private int cantidadcamaras;
+    private int pulgadas;
+    private Date fechaventa;
+    private String pixeles;
+
+    public int getIdcelular() {
+        return idcelular;
+    }
+
+    public void setIdcelular(int idcelular) {
+        this.idcelular = idcelular;
+    }
+
+    public int getIdnumEmpleado() {
+        return idnumEmpleado;
+    }
+
+    public void setIdnumEmpleado(int idnumEmpleado) {
+        this.idnumEmpleado = idnumEmpleado;
+    }
+
+    public int getIdcliente() {
+        return idcliente;
+    }
+
+    public void setIdcliente(int idcliente) {
+        this.idcliente = idcliente;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getSisoperativo() {
+        return sisoperativo;
+    }
+
+    public void setSisoperativo(String sisoperativo) {
+        this.sisoperativo = sisoperativo;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getMemoria() {
+        return memoria;
+    }
+
+    public void setMemoria(String memoria) {
+        this.memoria = memoria;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public String getCompañia() {
+        return compañia;
+    }
+
+    public void setCompañia(String compañia) {
+        this.compañia = compañia;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public int getCantidadcamaras() {
+        return cantidadcamaras;
+    }
+
+    public void setCantidadcamaras(int cantidadcamaras) {
+        this.cantidadcamaras = cantidadcamaras;
+    }
+
+    public int getPulgadas() {
+        return pulgadas;
+    }
+
+    public void setPulgadas(int pulgadas) {
+        this.pulgadas = pulgadas;
+    }
+
+    public Date getFechaventa() {
+        return fechaventa;
+    }
+
+    public void setFechaventa(Date fechaventa) {
+        this.fechaventa = fechaventa;
+    }
+
+    public String getPixeles() {
+        return pixeles;
+    }
+
+    public void setPixeles(String pixeles) {
+        this.pixeles = pixeles;
+    }
+    
+    
+}
+
+///////////////////////////   clienteDT   ////////////////////////
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package PROYECTO.dt;
+
+import java.sql.Date;
+
+/**
+ *
+ * @author jamon
+ */
+public class clienteDT {
+    private int idcliente;
+    private String nombre;
+    private String apaterno;
+    private String amaterno;
+    private String rfc;
+    private int celular;
+    private Date fechanacimiento;
+    private String correo;
+    private String sexo;
+
+    public int getIdcliente() {
+        return idcliente;
+    }
+
+    public void setIdcliente(int idcliente) {
+        this.idcliente = idcliente;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApaterno() {
+        return apaterno;
+    }
+
+    public void setApaterno(String apaterno) {
+        this.apaterno = apaterno;
+    }
+
+    public String getAmaterno() {
+        return amaterno;
+    }
+
+    public void setAmaterno(String amaterno) {
+        this.amaterno = amaterno;
+    }
+
+    public String getRfc() {
+        return rfc;
+    }
+
+    public void setRfc(String rfc) {
+        this.rfc = rfc;
+    }
+
+    public int getCelular() {
+        return celular;
+    }
+
+    public void setCelular(int celular) {
+        this.celular = celular;
+    }
+
+    public Date getFechanacimiento() {
+        return fechanacimiento;
+    }
+
+    public void setFechanacimiento(Date fechanacimiento) {
+        this.fechanacimiento = fechanacimiento;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+    
+    
+
+    
+    
+}
+
+///////////////////////////   empleadoDT   ////////////////////////
+
+package PROYECTO.dt;
+
+
+public class empleadoDT {
+    private int idnumEmpleado;
+    private int idtienda;
+    private String nombre;
+    private String cargo;
+    private int celular;
+    private String email;
+    private String sexo;
+
+    public int getIdnumEmpleado() {
+        return idnumEmpleado;
+    }
+
+    public void setIdnumEmpleado(int idnumEmpleado) {
+        this.idnumEmpleado = idnumEmpleado;
+    }
+
+    public int getIdtienda() {
+        return idtienda;
+    }
+
+    public void setIdtienda(int idtienda) {
+        this.idtienda = idtienda;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+
+    public int getCelular() {
+        return celular;
+    }
+
+    public void setCelular(int celular) {
+        this.celular = celular;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+    
+}
+
+///////////////////////////   notaDT   //////////////////////////
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package PROYECTO.dt;
+
+import java.sql.Date;
+
+/**
+ *
+ * @author jamon
+ */
+public class notaDT {
+    private int idnota;
+    private int idcelular;
+    private Date fechapago;
+    private String detalleventa;
+    private int cantidadproductos;
+    private Double preciototal;
+
+    public int getIdnota() {
+        return idnota;
+    }
+
+    public void setIdnota(int idnota) {
+        this.idnota = idnota;
+    }
+
+    public int getIdcelular() {
+        return idcelular;
+    }
+
+    public void setIdcelular(int idcelular) {
+        this.idcelular = idcelular;
+    }
+
+    public Date getFechapago() {
+        return fechapago;
+    }
+
+    public void setFechapago(Date fechapago) {
+        this.fechapago = fechapago;
+    }
+
+    public String getDetalleventa() {
+        return detalleventa;
+    }
+
+    public void setDetalleventa(String detalleventa) {
+        this.detalleventa = detalleventa;
+    }
+
+    public int getCantidadproductos() {
+        return cantidadproductos;
+    }
+
+    public void setCantidadproductos(int cantidadproductos) {
+        this.cantidadproductos = cantidadproductos;
+    }
+
+    public Double getPreciototal() {
+        return preciototal;
+    }
+
+    public void setPreciototal(Double preciototal) {
+        this.preciototal = preciototal;
+    }
+    
+    
+}
+
+///////////////////////////   tiendaDT   /////////////////////////
+
+package PROYECTO.dt;
+
+public class tiendaDT {
+    private int idtienda;
+    private String nombre;
+    private int telefono;
+    private String pais;
+    private String direccion;
+    private String correo;
+    private String horario;
+    private String rfc;
+
+    public int getIdtienda() {
+        return idtienda;
+    }
+
+    public void setIdtienda(int idtienda) {
+        this.idtienda = idtienda;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getHorario() {
+        return horario;
+    }
+
+    public void setHorario(String horario) {
+        this.horario = horario;
+    }
+
+    public String getRfc() {
+        return rfc;
+    }
+
+    public void setRfc(String rfc) {
+        this.rfc = rfc;
+    }
+    
+    
+
+  
+}
+
+////////////////////   AQUÍ TERMINAN LOS DT   ///////////////

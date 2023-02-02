@@ -1,0 +1,24 @@
+create table cliente(
+idcliente int,
+nombre varchar(45),
+aPaterno varchar(45),
+aMaterno varchar(45),
+rfc varchar(45),
+celular int,
+fechaNacimiento date,
+correo varchar(70),
+sexo varchar(20),
+primary key(idcliente));
+
+
+create table nota(
+idnota int,
+idcelular int,
+fechaPago date,
+detalleVenta varchar(99),
+cantidadProductos int,
+precioTotal double,
+primary key(idnota),
+foreign key(idcelular));
+
+

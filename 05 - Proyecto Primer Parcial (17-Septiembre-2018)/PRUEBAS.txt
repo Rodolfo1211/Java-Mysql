@@ -1,0 +1,954 @@
+Mira inche rubén xdxd
+Todas las pruebas empiezan con la primera letra de las palabras en
+mayúsculas y llevan un guión bajo 
+Ejemplo:
+	SelectAll_Celular
+	Actualizar_Empleado
+Ya puedes seguir con tu vida men ;)
+
+////////////////////   CREAR CELULAR   ////////////////////////
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package PRUEBAS;
+
+import PROYECTO.dao.celularDAO;
+import PROYECTO.delegate.SistemaDelegate;
+import PROYECTO.dt.celularDT;
+import java.sql.Date;
+
+/**
+ *
+ * @author jamon
+ */
+public class Crear_Celular {
+    public static void main(String[] args){
+        celularDT  dto= new celularDT();
+        SistemaDelegate fc = new SistemaDelegate();
+        dto.setIdcelular(1);
+        dto.setIdnumEmpleado(1);
+        dto.setIdcliente(100);
+        dto.setNombre("Samsung Galaxy Note 7");
+        dto.setSisoperativo("Android Explosivo :v");
+        dto.setMarca("Samsung");
+        dto.setMemoria("16 Gb");
+        dto.setPrecio(5000.00);
+        dto.setCompañia("Telcel");
+        dto.setColor("Negro");
+        dto.setCantidadcamaras(2);
+        dto.setPulgadas(5);
+        dto.setFechaventa(Date.valueOf("2018-09-17"));
+        dto.setPixeles("12 mp");
+        try {
+            fc.crearrCELULAR(dto);
+            System.out.println("CELULAR AGREGADO CORRECTAMENTE");
+        } catch (Exception e) {
+        }
+        
+    }
+}
+
+////////////////////////   CREAR CLIENTE   ////////////////////
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package PRUEBAS;
+
+import PROYECTO.delegate.SistemaDelegate;
+import PROYECTO.dt.clienteDT;
+import java.sql.Date;
+
+/**
+ *
+ * @author jamon
+ */
+public class Crear_Cliente {
+    public static void main(String[] args) {
+        clienteDT dto= new clienteDT();
+        SistemaDelegate fc = new SistemaDelegate();
+        dto.setIdcliente(100);
+        dto.setNombre("Armando");
+        dto.setApaterno("Alvarez");
+        dto.setAmaterno("Aguilar");
+        dto.setRfc("abcdefghijk123");
+        dto.setCelular(554005538);
+        dto.setFechanacimiento(Date.valueOf("1991-01-01"));
+        dto.setCorreo("elprimero@yahoo.com");
+        dto.setSexo("Masculino");
+        try {
+            fc.crearrCLIENTE(dto);
+            System.out.println("CLIENTE AGREGADO CORRECTAMENTE");
+            
+        } catch (Exception e) {
+        }
+        
+    }
+}
+
+//////////////////////////   CREAR EMPLEADO   ////////////////
+
+package PRUEBAS;
+
+import PROYECTO.delegate.SistemaDelegate;
+import PROYECTO.dt.empleadoDT;
+import java.sql.Date;
+
+
+public class Crear_Empleado {
+     public static void main(String[] args){
+        empleadoDT dto= new empleadoDT();
+        SistemaDelegate fc= new SistemaDelegate();
+        dto.setIdnumEmpleado(1);
+        dto.setIdtienda(1);
+        dto.setNombre("Ruben tovar");
+        dto.setCargo("compra");
+        dto.setCelular(550149922);
+        dto.setEmail("Rub@gmail.com");
+        dto.setSexo("masculino");
+        try {
+            fc.agregaEmpleado(dto);
+            System.out.println("EMPLEADO AGREGADO CORRECTAMENTE");
+        } catch (Exception e) {
+        }
+     }
+}
+
+////////////////////////   CREAR NOTA   ///////////////////////
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package PRUEBAS;
+
+import PROYECTO.delegate.SistemaDelegate;
+import PROYECTO.dt.notaDT;
+import java.sql.Date;
+
+/**
+ *
+ * @author jamon
+ */
+public class Crear_Nota {
+     public static void main(String[] args) {
+        notaDT dto= new notaDT();
+        SistemaDelegate fc = new SistemaDelegate();
+        dto.setIdnota(100);
+        dto.setIdcelular(100);
+        dto.setFechapago(Date.valueOf("2018-09-17"));
+        dto.setDetalleventa("Estuvo chida");
+        dto.setCantidadproductos(1);        
+        dto.setPreciototal(100.00);
+        try {
+            fc.crearrNOTA(dto);
+            System.out.println("NOTA AGREGADA CORRECTAMENTE");
+            
+        } catch (Exception e) {
+        }
+        
+    }
+}
+
+////////////////////////   CREAR TIENDA   /////////////////////
+
+package PRUEBAS;
+
+import PROYECTO.delegate.SistemaDelegate;
+import PROYECTO.dt.tiendaDT;
+import java.sql.Date;
+
+public class Crear_Tienda {
+    public static void main(String[] args){
+        tiendaDT dto= new tiendaDT();
+        SistemaDelegate fc= new SistemaDelegate();
+        dto.setIdtienda(1);
+        dto.setNombre("donpagalon");
+        dto.setTelefono(550449213);
+        dto.setPais("Mexico");
+        dto.setDireccion("Av cuaetemoc");
+        dto.setCorreo("donpq@gmail.com");
+        dto.setHorario("de 8 a 8");
+        dto.setRfc("no se");
+        try {
+            fc.agregaTienda(dto);
+            System.out.println("TIENDA AGREGADA CORRECTAMENTE");
+        } catch (Exception e) {
+        }
+     }
+    
+}
+
+/////////////////////////////////////////////////////////////////
+/////////////////   ESPACIO MAMALÓN :V   /////////////////////
+/////////////////////////////////////////////////////////////////
+
+//////////////////   BORRAR CELULAR   /////////////////////////
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package PRUEBAS;
+
+import PROYECTO.delegate.SistemaDelegate;
+import PROYECTO.dt.celularDT;
+
+/**
+ *
+ * @author jamon
+ */
+public class Borrar_Celular {
+    public static void main(String[]args){
+        celularDT dto=new celularDT();
+        SistemaDelegate fc = new SistemaDelegate();
+        dto.setIdcelular(1);
+        try {
+            fc.eliminarrCELULAR(dto);
+            System.out.println("CELULAR ELIMINADO CORRECTAMENTE");
+        } catch (Exception e) {
+        }
+    }
+}
+
+///////////////////////   BORRAR CLIENTE   ////////////////////
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package PRUEBAS;
+
+import PROYECTO.delegate.SistemaDelegate;
+import PROYECTO.dt.clienteDT;
+
+/**
+ *
+ * @author jamon
+ */
+public class Borrar_Cliente {
+    public static void main(String[]args){
+        clienteDT dto =new clienteDT();
+        SistemaDelegate fc = new SistemaDelegate();
+        dto.setIdcliente(100);
+        try {
+            fc.eliminarrCLIENTE(dto);
+            System.out.println("CLIENTE ELIMINADO CORRECTAMENTE");
+        } catch (Exception e) {
+        }
+    
+    }
+}
+
+//////////////////////////   BORRAR EMPLEADO   ///////////////
+
+package PRUEBAS;
+
+import PROYECTO.delegate.SistemaDelegate;
+import PROYECTO.dt.empleadoDT;
+
+public class Borrar_Empleado {
+    public static void main(String[] args){
+        empleadoDT dto= new empleadoDT();
+        SistemaDelegate fc= new SistemaDelegate();
+         dto.setIdnumEmpleado(1);
+        try {
+            fc.borraEmpleado(dto);
+            System.out.println("EMPLEADO ELIMINADO CORRECTAMENTE");
+        } catch (Exception e) {
+        }
+    }
+}
+
+///////////////////////   BORRAR NOTA   ///////////////////////
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package PRUEBAS;
+
+import PROYECTO.delegate.SistemaDelegate;
+import PROYECTO.dt.notaDT;
+
+/**
+ *
+ * @author jamon
+ */
+public class Borrar_Nota {
+    public static void main(String[]args){
+        notaDT dto =new notaDT();
+        SistemaDelegate fc = new SistemaDelegate();
+        dto.setIdnota(100);
+        try {
+            fc.eliminarrNOTA(dto);
+            System.out.println("NOTA ELIMINADA CORRECTAMENTE");
+        } catch (Exception e) {
+        }
+    
+    }
+}
+
+//////////////////   BORRAR TIENDA   /////////////////////////
+package PRUEBAS;
+
+import PROYECTO.delegate.SistemaDelegate;
+import PROYECTO.dt.tiendaDT;
+
+public class Borrar_Tienda {
+     public static void main(String[]args){
+        tiendaDT dto=new tiendaDT();
+        SistemaDelegate fc= new SistemaDelegate();
+        dto.setIdtienda(1);
+        try {
+            fc.borraTienda(dto);
+            System.out.println("TIENDA ELIMINADA CORRECTAMENTE");
+        } catch (Exception e) {
+        }
+    }
+    
+}   
+
+/////////////////////////////////////////////////////////////////
+/////////////////   ESPACIO MAMALÓN (2)   /////////////////////
+/////////////////////////////////////////////////////////////////
+
+////////////////   ACTUALIZAR CELULAR   //////////////////////
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package PRUEBAS;
+
+import PROYECTO.delegate.SistemaDelegate;
+import PROYECTO.dt.celularDT;
+import java.sql.Date;
+
+/**
+ *
+ * @author jamon
+ */
+public class Actualizar_Celular {
+    public static void main(String[]args){
+        celularDT dto = new celularDT();
+        SistemaDelegate fc = new SistemaDelegate();
+         dto.setIdnumEmpleado(1);
+        dto.setIdcliente(200);
+        dto.setNombre("iPhone Xs");
+        dto.setSisoperativo("iOS");
+        dto.setMarca("Apple");
+        dto.setMemoria("64 Gb");
+        dto.setPrecio(36000.00);
+        dto.setCompañia("AT&T");
+        dto.setColor("Negro Black");
+        dto.setCantidadcamaras(3);
+        dto.setPulgadas(7);
+        dto.setFechaventa(Date.valueOf("2018-09-18"));
+        dto.setPixeles("21 mp");
+        dto.setIdcelular(1);
+        try {
+            fc.actualizarrCELUlAR(dto);
+            System.out.println("Producto modificado");
+        } catch (Exception e) {
+        }
+    }
+}
+
+////////////////////   ACTUALIZAR CLIENTE   //////////////////
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package PRUEBAS;
+
+import PROYECTO.delegate.SistemaDelegate;
+import PROYECTO.dt.celularDT;
+import java.sql.Date;
+
+/**
+ *
+ * @author jamon
+ */
+public class Actualizar_Celular {
+    public static void main(String[]args){
+        celularDT dto = new celularDT();
+        SistemaDelegate fc = new SistemaDelegate();
+         dto.setIdnumEmpleado(1);
+        dto.setIdcliente(200);
+        dto.setNombre("iPhone Xs");
+        dto.setSisoperativo("iOS");
+        dto.setMarca("Apple");
+        dto.setMemoria("64 Gb");
+        dto.setPrecio(36000.00);
+        dto.setCompañia("AT&T");
+        dto.setColor("Negro Black");
+        dto.setCantidadcamaras(3);
+        dto.setPulgadas(7);
+        dto.setFechaventa(Date.valueOf("2018-09-18"));
+        dto.setPixeles("21 mp");
+        dto.setIdcelular(1);
+        try {
+            fc.actualizarrCELUlAR(dto);
+            System.out.println("Producto modificado");
+        } catch (Exception e) {
+        }
+    }
+}
+
+///////////////////   ACTUALIZAR EMPLEADO   /////////////////
+
+package PRUEBAS;
+
+import PROYECTO.delegate.SistemaDelegate;
+import PROYECTO.dt.empleadoDT;
+import java.sql.Date;
+
+public class Actualizar_Empleado {
+    public static void main(String[] args){
+        empleadoDT dto= new empleadoDT();
+        SistemaDelegate fc= new SistemaDelegate();
+        dto.setIdtienda(1);
+        dto.setNombre("el javis");
+        dto.setCargo("robo");
+        dto.setCelular(560149922);
+        dto.setEmail("javi@gmail.com");
+        dto.setSexo("masculino");
+        dto.setIdnumEmpleado(1);
+        try {
+            fc.cambiaEmpleado(dto);
+            System.out.println("EMPLEADO ACTUALIZADO CORRECTAMENTE");
+        } catch (Exception e) {
+        }
+     }
+}
+
+//////////////////////////   ACTUALIZAR NOTA   ///////////////
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package PRUEBAS;
+
+import PROYECTO.delegate.SistemaDelegate;
+import PROYECTO.dt.notaDT;
+import java.sql.Date;
+
+/**
+ *
+ * @author jamon
+ */
+public class Actualizar_Nota {
+    public static void main(String[]args){
+         notaDT dto =new notaDT();
+         SistemaDelegate fc = new SistemaDelegate();
+         dto.setIdcelular(200);
+         dto.setFechapago(Date.valueOf("2018-09-18"));
+         dto.setDetalleventa("No estuvo tan chida");
+         dto.setCantidadproductos(2);
+         dto.setPreciototal(200.00);
+         dto.setIdnota(200);
+         try {
+             fc.actualizarrNOTA(dto);
+             System.out.println("NOTA ACTUALIZADA CORRECTAMENTE");
+        }catch (Exception e) {
+           }
+    }
+}
+
+////////////////////   ACTUALIIZAR TIENDA   ///////////////////
+
+package PRUEBAS;
+
+import PROYECTO.delegate.SistemaDelegate;
+import PROYECTO.dt.tiendaDT;
+import java.sql.Date;
+
+public class Actualizar_Tienda {
+     public static void main(String[] args){
+        tiendaDT dto= new tiendaDT();
+        SistemaDelegate fc= new SistemaDelegate();
+        dto.setNombre("elchido");
+        dto.setTelefono(550449213);
+        dto.setPais("EUA");
+        dto.setDireccion("Av cuaetemoc");
+        dto.setCorreo("donpa@gmail.com");
+        dto.setHorario("de 6 a 8");
+        dto.setRfc("no se");
+        dto.setIdtienda(1);
+        try {
+            fc.cambiaTienda(dto);
+            System.out.println("TIENDA ACTUALIZADA CORRECTAMENTE");
+        } catch (Exception e) {
+        }
+     }
+    
+}
+
+/////////////////////////////////////////////////////////////////
+/////////////////   ESPACIO MAMALÓN (3)   ////////////////////
+/////////////////////////////////////////////////////////////////
+
+///////////////////   SELECT CELULAR   ////////////////////////
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package PRUEBAS;
+
+import PROYECTO.delegate.SistemaDelegate;
+import PROYECTO.dt.celularDT;
+
+/**
+ *
+ * @author jamon
+ */
+public class Select_Celular {
+    public static void main(String[] args) {
+        celularDT dt = new celularDT();
+        SistemaDelegate fc = new SistemaDelegate();
+        dt.setNombre("iPhone Xs");
+        celularDT dto;
+        
+        try {
+            dto=fc.seleccionarrCELULAR(dt);
+            if(dto != null)
+            {
+                fc.seleccionarrCELULAR(dto);
+                System.out.println("CELULAR ENCONTRADO");
+                System.out.println(" | " + dto.getIdcelular() + 
+                        " | " + dto.getIdnumEmpleado() + 
+                        " | " + dto.getIdcliente() + 
+                        " | " + dto.getNombre() + 
+                        " | " + dto.getSisoperativo() + 
+                        " | " + dto.getMarca() + 
+                        " | " + dto.getMemoria() +
+                        " | " + dto.getPrecio() +
+                        " | " + dto.getCompañia() +
+                        " | " + dto.getColor() +
+                        " | " + dto.getCantidadcamaras() +
+                        " | " + dto.getPulgadas() + 
+                        " | " + dto.getFechaventa()  +
+                        " | " + dto.getPixeles() + " | ");
+            }
+            else {
+                fc.seleccionarrCELULAR(dto);
+                System.out.println("CELULAR NO ENCONTRADO");
+            }
+        }
+        catch (Exception e){
+        
+        }
+    }
+}
+
+////////////////////////   SELECT CLIENTE   ///////////////////
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package PRUEBAS;
+
+import PROYECTO.delegate.SistemaDelegate;
+import PROYECTO.dt.clienteDT;
+
+/**
+ *
+ * @author jamon
+ */
+public class Select_Cliente {
+    public static void main(String[] args) {
+        clienteDT dt = new clienteDT();
+        SistemaDelegate fc = new SistemaDelegate();
+        dt.setNombre("Benito");
+        clienteDT dto;
+        
+        try {
+            dto=fc.seleccionarrCLIENTE(dt);
+            if(dto != null)
+            {
+                fc.seleccionarrCLIENTE(dto);
+                System.out.println("CLIENTE ENCONTRADO");
+                System.out.println(" | " + dto.getIdcliente() + 
+                        " | " + dto.getNombre() + 
+                        " | " + dto.getApaterno() + 
+                        " | " + dto.getAmaterno() + 
+                        " | " + dto.getRfc() +
+                        " | " + dto.getCelular() + 
+                        " | " + dto.getFechanacimiento()  +
+                        " | " + dto.getCorreo()  +
+                        " | " + dto.getSexo() + " | ");
+            }
+            else {
+                fc.seleccionarrCLIENTE(dto);
+                System.out.println("CLIENTE NO ENCONTRADO");
+            }
+        }
+        catch (Exception e){
+        
+        }
+    }
+}
+
+////////////////////   SELECT EMPLEADO   /////////////////////
+
+package PRUEBAS;
+
+import PROYECTO.delegate.SistemaDelegate;
+import PROYECTO.dt.empleadoDT;
+
+public class Select_Empleado {
+     public static void main(String[] args) {
+        empleadoDT dt = new empleadoDT();
+        SistemaDelegate fc= new SistemaDelegate();
+        dt.setNombre("Ruben tovar");
+        empleadoDT dto;
+        
+        try {
+            dto= fc.buscaEmpleado(dt);
+            if(dto != null)
+            {
+                
+            System.out.println("EMPLEADO ENCONTRADO");
+            System.out.println(" | " + dto.getIdnumEmpleado() + " | " + dto.getIdtienda() + " | "
+            + dto.getNombre() + " | " + dto.getCargo() + " | " + dto.getCelular() + 
+            " | " + dto.getEmail() + " | " + dto.getSexo() + " | " );
+            }
+            else
+            {
+                System.out.println("EMPLEADO NO ENCONTRADO");
+            } 
+        }
+        catch (Exception e)
+        {
+            
+        }
+    
+}
+}
+
+////////////////////////   SELECT NOTA   //////////////////////
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package PRUEBAS;
+
+import PROYECTO.delegate.SistemaDelegate;
+import PROYECTO.dt.notaDT;
+
+/**
+ *
+ * @author jamon
+ */
+public class Select_Nota {
+      public static void main(String[] args) {
+        notaDT dt = new notaDT();
+        SistemaDelegate fc = new SistemaDelegate();
+        dt.setIdnota(200);
+        
+        notaDT dto;
+        
+        try {
+            dto=fc.seleccionarrNOTA(dt);
+            if(dto != null)
+            {
+                fc.seleccionarrNOTA(dto);
+                System.out.println("NOTA ENCONCTRADA");
+                System.out.println(" | " + dto.getIdnota() + 
+                        " | " + dto.getIdcelular() + 
+                        " | " + dto.getFechapago()  +
+                        " | " + dto.getDetalleventa() + 
+                        " | " + dto.getCantidadproductos() +
+                        " | " + dto.getPreciototal() + " | ");
+            }
+            else {
+                fc.seleccionarrNOTA(dto);
+                System.out.println("NOTA NO ENCONTRADA");
+            }
+        }
+        catch (Exception e){
+        
+        }
+    }
+}
+
+/////////////////////   SELECT TIENDA   ///////////////////////
+
+package PRUEBAS;
+
+import PROYECTO.delegate.SistemaDelegate;
+import PROYECTO.dt.tiendaDT;
+
+public class Select_Tienda {
+    public static void main(String[] args) {
+        tiendaDT dt = new tiendaDT();
+        SistemaDelegate fc= new SistemaDelegate();
+        dt.setNombre("elchido");
+        tiendaDT dto;
+        
+        try {
+            dto= fc.buscaTienda(dt);
+            if(dto != null)
+            {
+                
+            System.out.println("TIENDA ENCONTRADA");
+            System.out.println(" | " + dto.getIdtienda() + " | " + dto.getNombre() + " | "
+            + dto.getTelefono() + " | " + dto.getPais() + " | " + dto.getDireccion() + 
+            " | " + dto.getCorreo() + " | " + dto.getHorario() + " | " + dto.getRfc()+ " | " );
+            }
+            else
+            {
+                System.out.println("TIENDA NO ENCONTRADA");
+            } 
+        }
+        catch (Exception e)
+        {
+            
+        }
+    
+}
+    
+}
+
+/////////////////////////////////////////////////////////////////
+/////////////////   ESPACIO MAMALÓN (4)   ////////////////////
+/////////////////////////////////////////////////////////////////
+
+//////////////////////   SLECT ALL CELULAR   ///////////////////
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package PRUEBAS;
+
+import PROYECTO.delegate.SistemaDelegate;
+import PROYECTO.dt.celularDT;
+import java.util.Iterator;
+import java.util.List;
+
+/**
+ *
+ * @author jamon
+ */
+public class SelectAll_Celular {
+     public static void main(String[]args){
+        celularDT dto = new celularDT();
+        SistemaDelegate fc = new SistemaDelegate();
+        List lista;
+        try{
+            lista = fc.seleccionarrtodoCELULAR(dto);
+            Iterator it=lista.iterator();
+            System.out.println("DESPLEGANDO LISTA...");
+            while(it.hasNext()){
+                dto=(celularDT) it.next();
+                System.out.println(" | " + dto.getIdcelular() + 
+                        " | " + dto.getIdnumEmpleado() + 
+                        " | " + dto.getIdcliente() + 
+                        " | " + dto.getNombre() + 
+                        " | " + dto.getSisoperativo() + 
+                        " | " + dto.getMarca() + 
+                        " | " + dto.getMemoria() +
+                        " | " + dto.getPrecio() +
+                        " | " + dto.getCompañia() +
+                        " | " + dto.getColor() +
+                        " | " + dto.getCantidadcamaras() +
+                        " | " + dto.getPulgadas() + 
+                        " | " + dto.getFechaventa()  +
+                        " | " + dto.getPixeles() + " | ");
+            }
+            
+        }
+        catch (Exception e){
+            
+        }
+        
+        
+    }
+}
+
+//////////////////////   SLECT ALL CLIENTE    //////////////////
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package PRUEBAS;
+
+import PROYECTO.delegate.SistemaDelegate;
+import PROYECTO.dt.clienteDT;
+import java.util.Iterator;
+import java.util.List;
+
+/**
+ *
+ * @author jamon
+ */
+public class SelectAll_Cliente {
+      public static void main(String[]args){
+        clienteDT dto = new clienteDT();
+        SistemaDelegate fc = new SistemaDelegate();
+        List lista;
+        try{
+            lista = fc.seleccionarrtodoCLIENTE(dto);
+            Iterator it=lista.iterator();
+            System.out.println("DESPLEGANDO LISTA...");
+            while(it.hasNext()){
+                dto=(clienteDT) it.next();
+                System.out.println(" | " + dto.getIdcliente() + 
+                        " | " + dto.getNombre() + 
+                        " | " + dto.getApaterno() + 
+                        " | " + dto.getAmaterno() + 
+                        " | " + dto.getRfc() + 
+                        " | " + dto.getCelular() + 
+                        " | " + dto.getFechanacimiento()  +
+                        " | " + dto.getCorreo()  +
+                        " | " + dto.getSexo() + " | ");
+            }
+            
+        }
+        catch (Exception e){
+            
+        }
+        
+        
+    }
+}
+
+//////////////////////   SLECT ALL EMPLEADO   /////////////////
+
+package PRUEBAS;
+
+import PROYECTO.delegate.SistemaDelegate;
+import PROYECTO.dt.empleadoDT;
+import java.util.Iterator;
+import java.util.List;
+
+
+public class SelectAll_Empleado {
+    public static void main(String[]args){
+        empleadoDT dto=new empleadoDT();
+        SistemaDelegate fc= new SistemaDelegate();
+        List lista;
+        try {
+            lista = fc.ListasEmpleado(dto);
+            Iterator it=lista.iterator();
+            System.out.println("DESPLEGANDO LISTA...");
+            while(it.hasNext())
+            {
+                dto=(empleadoDT) it.next();
+                
+                System.out.println(" | " + dto.getIdnumEmpleado() + " | " + dto.getIdtienda() + " | "
+            + dto.getNombre() + " | " + dto.getCargo() + " | " + dto.getCelular() + 
+            " | " + dto.getEmail() + " | " +dto.getSexo()+ " | " );
+            }
+            
+        } catch (Exception e) {
+        }
+        
+    }
+}
+
+//////////////////////   SLECT ALL NOTA   /////////////////////
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package PRUEBAS;
+
+import PROYECTO.delegate.SistemaDelegate;
+import PROYECTO.dt.notaDT;
+import java.util.Iterator;
+import java.util.List;
+
+/**
+ *
+ * @author jamon
+ */
+public class SelectAll_Nota {
+     public static void main(String[]args){
+        notaDT dto = new notaDT();
+        SistemaDelegate fc = new SistemaDelegate();
+        //laptopDAO dao = new laptopDAO();
+        List lista;
+        try{
+            lista = fc.seleccionarrtodoNOTA(dto);
+            Iterator it=lista.iterator();
+            System.out.println("DESPLEGANDO LISTA...");
+            while(it.hasNext()){
+                dto=(notaDT) it.next();
+                System.out.println(" | " + dto.getIdnota() + 
+                        " | " + dto.getIdcelular() + 
+                        " | " + dto.getFechapago() + 
+                        " | " + dto.getDetalleventa() + 
+                        " | " + dto.getCantidadproductos() +
+                        " | " + dto.getPreciototal() + " | ");
+            }
+            
+        }
+        catch (Exception e){
+            
+        }
+        
+        
+    }
+}
+
+//////////////////////   SLECT ALL TIENDA   ///////////////////
+
+package PRUEBAS;
+
+import PROYECTO.dt.tiendaDT;
+import java.util.Iterator;
+import java.util.List;
+import PROYECTO.delegate.SistemaDelegate;
+
+public class SelectAll_Tienda {
+    public static void main(String[]args){
+        tiendaDT dto=new tiendaDT();
+        SistemaDelegate fc= new SistemaDelegate();
+        List lista;
+        try {
+            lista = fc.ListasTienda(dto);
+            Iterator it=lista.iterator();
+            System.out.println("DEPLGANDO LISTA...");
+            while(it.hasNext())
+            {
+                dto=(tiendaDT) it.next();
+                
+                System.out.println(" | " + dto.getIdtienda() + " | " + dto.getNombre() + " | "
+            + dto.getTelefono() + " | " + dto.getPais() + " | " + dto.getDireccion() + 
+            " | " + dto.getCorreo() + " | " +dto.getHorario() + " | " + dto.getRfc()+ " | " );
+            }
+            
+        } catch (Exception e) {
+        }
+        
+    }
+    
+}
+////////////  AQUI SE TERMINAN LAS PRUEBAS :D  ////////////
